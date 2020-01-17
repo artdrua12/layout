@@ -6,13 +6,15 @@
 
 <script>
 import Default from './layout/Default';
+import Frame from './Frame'
 export default {
   name: "app",
   data() {
     return {};
   },
   components: {
-    Default
+    Default,
+    Frame
   }
 };
 </script>
@@ -24,5 +26,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+body{
+  margin: 0px;
 }
 </style>
