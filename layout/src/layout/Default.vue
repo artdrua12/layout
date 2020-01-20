@@ -36,7 +36,7 @@
           >{{item2}}</el-menu-item>
         </el-submenu>
       </el-menu>
-      
+
       <el-menu
         default-active="2"
         class="el-menu-vertical-demo"
@@ -59,11 +59,15 @@
         </el-menu-item>
       </el-menu>
     </div>
-    <div class="content"></div>
+
+    <div class="content">
+      <BasisVuePage />
+    </div>
   </div>
 </template>
 
 <script>
+import BasisVuePage from "./BasisVuePage";
 export default {
   data() {
     return {
@@ -93,7 +97,10 @@ export default {
       ]
     };
   },
-  methods: {}
+  methods: {},
+  components: {
+    BasisVuePage
+  }
 };
 </script>
 
@@ -107,16 +114,14 @@ export default {
   display: flex;
   flex-direction: column;
   display: grid;
-  grid-template-rows: auto 56px 1fr auto ;
+  grid-template-rows: auto 56px 1fr auto;
 }
-.content {
-  background-color: blanchedalmond;
-}
+
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 300px;
   min-height: auto;
 }
-.el-menu:nth-of-type(2){
+.el-menu:nth-of-type(2) {
   overflow-y: auto;
 }
 </style>
