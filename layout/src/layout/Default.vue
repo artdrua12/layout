@@ -2,7 +2,20 @@
   <div class="globalDefaultWrapper">
     <div class="sidebar">
       <button @click="isCollapse=!isCollapse">Show</button>
-      <div>Some teXt</div>
+      <el-menu
+        default-active="2"
+        class="el-menu-vertical-demo"
+        background-color="#545c64"
+        text-color="#fff"
+        active-text-color="#ffd04b"
+        :collapse="isCollapse"
+      >
+        <el-menu-item index="2">
+          <i class="el-icon-menu"></i>
+          <span slot="title">Investigtions</span>
+        </el-menu-item>
+      </el-menu>
+
       <el-menu
         default-active="2"
         class="el-menu-vertical-demo"
@@ -22,8 +35,28 @@
             :index="`${index}-${index2}`"
           >{{item2}}</el-menu-item>
         </el-submenu>
-        <div>Some teXt</div>
-        <div>Some teXt</div>
+      </el-menu>
+      
+      <el-menu
+        default-active="2"
+        class="el-menu-vertical-demo"
+        background-color="#545c64"
+        text-color="#fff"
+        active-text-color="#ffd04b"
+        :collapse="isCollapse"
+      >
+        <el-menu-item index="1">
+          <i class="el-icon-menu"></i>
+          <span slot="title">Text</span>
+        </el-menu-item>
+        <el-menu-item index="2">
+          <i class="el-icon-menu"></i>
+          <span slot="title">Text</span>
+        </el-menu-item>
+        <el-menu-item index="3">
+          <i class="el-icon-menu"></i>
+          <span slot="title">Text</span>
+        </el-menu-item>
       </el-menu>
     </div>
     <div class="content"></div>
@@ -74,13 +107,16 @@ export default {
   display: flex;
   flex-direction: column;
   display: grid;
-  grid-template-rows: 20px 40px 1fr 40px 20px;
+  grid-template-rows: auto 56px 1fr auto ;
 }
 .content {
   background-color: blanchedalmond;
 }
 .el-menu-vertical-demo:not(.el-menu--collapse) {
-  width: 200px;
-  min-height: 400px;
+  width: 270px;
+  min-height: auto;
+}
+.el-menu:nth-of-type(2){
+  overflow-y: auto;
 }
 </style>
