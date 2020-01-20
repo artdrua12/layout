@@ -113,7 +113,7 @@ export default {
   background-color: blanchedalmond;
 }
 .el-menu-vertical-demo:not(.el-menu--collapse) {
-  width: 270px;
+  width: 300px;
   min-height: auto;
 }
 .el-menu:nth-of-type(2){

@@ -6,15 +6,13 @@
 
 <script>
 import Default from './layout/Default';
-import Frame from './Frame'
 export default {
   name: "app",
   data() {
     return {};
   },
   components: {
-    Default,
-    Frame
+    Default
   }
 };
 </script>
