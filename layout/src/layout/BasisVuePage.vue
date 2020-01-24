@@ -97,12 +97,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
-.flex {
-  display: flex;
-}
-.grid {
-  display: grid;
-}
+
 .test {
   display: flex;
   flex-direction: column;

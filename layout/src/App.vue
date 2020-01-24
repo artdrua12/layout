@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <default/>
+    <default />
   </div>
 </template>
 
 <script>
-import Default from './layout/Default';
+import Default from "./layout/Default";
 export default {
   name: "app",
   data() {
@@ -25,7 +25,13 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-body{
+body {
   margin: 0px;
+}
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
 }
 </style>
