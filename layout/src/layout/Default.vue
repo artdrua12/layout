@@ -1,7 +1,11 @@
 <template>
   <div class="globalDefaultWrapper grid">
-    <side-menu class="sidebar"></side-menu>
-    <vpage class="content"></vpage>
+    <div class="sidebar">
+      <side-menu />
+    </div>
+    <vpage class="contentvpage">
+      <vpage />
+    </vpage>
   </div>
 </template>
 
@@ -19,7 +23,7 @@ export default {
 };
 </script>
 
-<style >
+<style scoped >
 .globalDefaultWrapper {
   grid-template-columns: auto 1fr;
   grid-template-rows: 100vh auto;
@@ -30,7 +34,7 @@ export default {
 .sidebar {
   grid-area: sidebar;
 }
-.content {
+.contentvpage {
   grid-area: content;
 }
 </style>

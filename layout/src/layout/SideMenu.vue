@@ -2,41 +2,46 @@
   <div class="sidemenu grid">
     <button @click="isCollapse=!isCollapse">Show</button>
 
-    <el-menu
-      default-active="2"
-      class="el-menu-vertical-demo"
-      background-color="#545c64"
-      text-color="#fff"
-      active-text-color="#ffd04b"
-      :collapse="isCollapse"
-    >
-      <el-menu-item index="2">
-        <i class="el-icon-menu"></i>
-        <span slot="title">Investigtions</span>
-      </el-menu-item>
-    </el-menu>
+    <el-aside width="auto">
+      <el-menu
+        default-active="2"
+        class="el-menu-vertical-demo"
+        background-color="#545c64"
+        text-color="#fff"
+        active-text-color="#ffd04b"
+        :collapse="isCollapse"
+      >
+        <el-menu-item index="2">
+          <i class="el-icon-menu"></i>
+          <span slot="title">Investigtions</span>
+        </el-menu-item>
+      </el-menu>
+    </el-aside>
 
-    <el-menu
-      default-active="2"
-      class="el-menu-vertical-demo"
-      background-color="#545c64"
-      text-color="#fff"
-      active-text-color="#ffd04b"
-      :collapse="isCollapse"
-    >
-      <el-submenu v-for="(item,index) in dataMenu" :key="index" :index="`${index}`">
-        <template slot="title">
-          <i :class="item.icon"></i>
-          <span slot="title">{{item.title}}</span>
-        </template>
-        <el-menu-item
-          v-for="(item2, index2) in item.items"
-          :key="index2"
-          :index="`${index}-${index2}`"
-        >{{item2}}</el-menu-item>
-      </el-submenu>
-    </el-menu>
+    <el-aside width="auto">
+      <el-menu
+        default-active="2"
+        class="el-menu-vertical-demo"
+        background-color="#545c64"
+        text-color="#fff"
+        active-text-color="#ffd04b"
+        :collapse="isCollapse"
+      >
+        <el-submenu v-for="(item,index) in dataMenu" :key="index" :index="`${index}`">
+          <template slot="title">
+            <i :class="item.icon"></i>
+            <span slot="title">{{item.title}}</span>
+          </template>
+          <el-menu-item
+            v-for="(item2, index2) in item.items"
+            :key="index2"
+            :index="`${index}-${index2}`"
+          >{{item2}}</el-menu-item>
+        </el-submenu>
+      </el-menu>
+    </el-aside>
 
+    <el-aside width="auto">
     <el-menu
       default-active="2"
       class="el-menu-vertical-demo"
@@ -58,6 +63,7 @@
         <span slot="title">Text</span>
       </el-menu-item>
     </el-menu>
+    </el-aside>
   </div>
 </template>
 

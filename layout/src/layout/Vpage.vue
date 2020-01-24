@@ -16,8 +16,7 @@ export default {
 
 <style scoped>
 .vpage {
-  grid-template-columns: 1fr;
-  grid-template-rows: fit-content(50vh) 1fr;
+  grid-template-rows: minmax(5px, 50vh) 1fr;
 }
 .title {
   overflow: auto;
