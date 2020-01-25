@@ -2,31 +2,22 @@
   <div class="sidemenu grid">
     <button @click="isCollapse=!isCollapse">Show</button>
 
-    <el-aside width="auto">
+    <el-aside width="auto" >
       <el-menu
-        default-active="2"
         class="el-menu-vertical-demo"
+         default-active="1"
         background-color="#545c64"
         text-color="#fff"
         active-text-color="#ffd04b"
         :collapse="isCollapse"
       >
-        <el-menu-item index="2">
+        <el-menu-item index="10">
           <i class="el-icon-menu"></i>
           <span slot="title">Investigtions</span>
         </el-menu-item>
-      </el-menu>
-    </el-aside>
 
-    <el-aside width="auto">
-      <el-menu
-        default-active="2"
-        class="el-menu-vertical-demo"
-        background-color="#545c64"
-        text-color="#fff"
-        active-text-color="#ffd04b"
-        :collapse="isCollapse"
-      >
+        <el-divider></el-divider>
+
         <el-submenu v-for="(item,index) in dataMenu" :key="index" :index="`${index}`">
           <template slot="title">
             <i :class="item.icon"></i>
@@ -38,31 +29,22 @@
             :index="`${index}-${index2}`"
           >{{item2}}</el-menu-item>
         </el-submenu>
-      </el-menu>
-    </el-aside>
 
-    <el-aside width="auto">
-    <el-menu
-      default-active="2"
-      class="el-menu-vertical-demo"
-      background-color="#545c64"
-      text-color="#fff"
-      active-text-color="#ffd04b"
-      :collapse="isCollapse"
-    >
-      <el-menu-item index="1">
-        <i class="el-icon-menu"></i>
-        <span slot="title">Text</span>
-      </el-menu-item>
-      <el-menu-item index="2">
-        <i class="el-icon-menu"></i>
-        <span slot="title">Text</span>
-      </el-menu-item>
-      <el-menu-item index="3">
-        <i class="el-icon-menu"></i>
-        <span slot="title">Text</span>
-      </el-menu-item>
-    </el-menu>
+        <el-divider></el-divider>
+        <el-menu-item index="20">
+          <i class="el-icon-menu"></i>
+          <span slot="title">Text</span>
+        </el-menu-item>
+
+        <el-menu-item index="30">
+          <i class="el-icon-menu"></i>
+          <span slot="title">Text</span>
+        </el-menu-item>
+        <el-menu-item index="40">
+          <i class="el-icon-menu"></i>
+          <span slot="title">Text</span>
+        </el-menu-item>
+      </el-menu>
     </el-aside>
   </div>
 </template>
@@ -102,16 +84,28 @@ export default {
 
 <style scoped>
 .sidemenu {
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 56px 1fr auto;
   height: 100vh;
+  grid-template-rows: 20px 1fr;
+  /* background-color: #545c64; */
 }
 
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 300px;
-  min-height: auto;
 }
-.el-menu:nth-of-type(2) {
+.el-menu-vertical-demo {
+  min-height: 100%;
+}
+.el-menu {
   overflow-y: auto;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+}
+.el-divider {
+  margin: 0px;
+}
+.el-divider:nth-of-type(2) {
+  margin-top: auto;
 }
 </style>
